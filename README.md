@@ -7,7 +7,7 @@ A full-stack web app to manage **courses**, **users** (Admin / Faculty / Student
 
 ---
 
-## **Backend — Local Setup (necessary only)**
+## **Backend — Local Setup **
 
 **Prereqs:** **JDK 17**, **Maven 3.9+**, **MySQL 8**
 
@@ -53,7 +53,7 @@ cd course-management-backend
 
 ---
 
-## **Frontend — Local Setup (necessary only)**
+## **Frontend — Local Setup **
 
 **Prereqs:** **Node.js 18+ (LTS)**
 
@@ -118,7 +118,7 @@ npm run dev
 
 ---
 
-## **Website Features** *(add screenshots under each heading)*
+## **Website Features** **
 
 ### **Login Page**
 
