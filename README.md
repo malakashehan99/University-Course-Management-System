@@ -77,7 +77,7 @@ npm run dev
 
 ---
 
-## **📡 API Endpoints**
+## **API Endpoints**
 
 > Demo build currently allows all endpoints (**permitAll**). `/api/auth/login` still returns a JWT used by the frontend.
 
