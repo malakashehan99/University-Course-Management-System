@@ -1,0 +1,99 @@
+/* Topbar (sticky header area) */
+.topbar {
+  position: sticky;
+  top: 0;
+  z-index: 30;
+
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid #eef0f4;
+
+  height: 56px;
+
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+/* Brand area (center, clickable to go home) */
+.topbar__center {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  cursor: pointer;
+  user-select: none;
+}
+
+.logo {
+  font-size: 20px;
+}
+
+.brand {
+  font-size: 18px;
+  color: #0f172a;
+}
+
+.brand strong {
+  color: #111827;
+}
+
+.brand span {
+  color: #4b5563;
+}
+
+.brand em {
+  color: #4f46e5;
+  font-style: normal;
+  font-weight: 700;
+}
+
+/* Right side (auth links, user pill, logout) */
+.topbar__right {
+  display: flex;
+  gap: 10px;
+  justify-content: flex-end;
+}
+
+.topbar__link {
+  color: #4f46e5;
+  text-decoration: none;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* User badge */
+.userpill {
+  padding-top: 6px;
+  padding-bottom: 6px;
+  padding-left: 10px;
+  padding-right: 10px;
+
+  border-radius: 999px;
+  background: #f3f4f6;
+
+  color: #111827;
+  font-size: 13px;
+}
+
+/* Logout button */
+.logout {
+  border: 1px solid #e5e7eb;
+  background: #fff;
+  border-radius: 10px;
+
+  padding-top: 6px;
+  padding-bottom: 6px;
+  padding-left: 10px;
+  padding-right: 10px;
+
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.logout:hover {
+  background: #f8fafc;
+}

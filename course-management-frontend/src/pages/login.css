@@ -1,0 +1,225 @@
+/* Background */
+.login-bg{
+  min-height:100vh;
+  background:
+    linear-gradient(rgba(10,15,25,.55), rgba(10,15,25,.55)),
+    url("https://res.cloudinary.com/dtqcgwrgk/image/upload/v1756739246/campus_y6erce.png") center/cover no-repeat fixed;
+}
+
+/* Theme tokens */
+:root{
+  --bg:#eef2ff;
+  --card:#ffffffee;
+  --text:#0f172a;
+  --muted:#6b7280;
+  --brand:#4f46e5;
+  --ring:rgba(79,70,229,.25);
+}
+
+/* Wrapper + card */
+.login__wrap{
+  min-height:calc(100vh - 56px);
+  display:grid;
+  place-items:center;
+  padding:32px 16px;
+}
+.login__card{
+  width:100%;
+  max-width:520px;
+  background:var(--card);
+  border-radius:18px;
+  box-shadow:0 30px 60px rgba(2,6,23,.18);
+  padding:28px;
+}
+
+/* Brand (text) */
+.login__brand{
+  text-align:center;
+  font-size:12px;
+  font-weight:800;
+  color:var(--brand);
+  letter-spacing:.32px;
+  text-transform:uppercase;
+  margin-bottom:6px;
+  opacity:.95;
+}
+
+/* Titles */
+.login__title{
+  text-align:center;
+  margin:8px 0;
+  font-size:32px;
+  font-weight:800;
+  color:#111827;
+}
+.login__sub{
+  text-align:center;
+  margin:0 0 18px;
+  color:#cbd5e1;
+}
+
+/* Fields */
+.login__label{
+  font-size:13px;
+  color:#334155;
+  margin-top:6px;
+}
+.login__field{
+  display:flex;
+  align-items:center;
+  gap:8px;
+  border:1px solid #e5e7eb;
+  border-radius:12px;
+  padding:10px 12px;
+  background:#fff;
+}
+.login__field:focus-within{
+  border-color:var(--brand);
+  box-shadow:0 0 0 4px var(--ring);
+}
+.login__field input{
+  flex:1;
+  border:none;
+  outline:none;
+  font-size:15px;
+  background:transparent;
+  color:#0f172a;
+}
+
+/* Small Show/Hide toggle */
+.login__toggle{
+  border:none;
+  background:transparent;
+  font-size:12px;
+  color:#475569;
+  cursor:pointer;
+  padding:0 2px;
+}
+.login__toggle:hover{ text-decoration:underline; }
+
+/* Errors */
+.login__error{
+  background:#fef2f2;
+  border:1px solid #fecaca;
+  color:#b91c1c;
+  padding:10px 12px;
+  border-radius:12px;
+  margin-top:6px;
+}
+
+/* Primary button */
+.login__btn{
+  margin-top:10px;
+  width:100%;
+  border:none;
+  background:var(--brand);
+  color:#fff;
+  padding:12px 16px;
+  border-radius:12px;
+  font-weight:700;
+  cursor:pointer;
+  transition:transform .06s ease, filter .15s ease;
+}
+.login__btn:hover{
+  filter:brightness(.95);
+  transform:translateY(-1px);
+}
+.login__btn:active{ transform:translateY(0); }
+
+/* Divider */
+.login__divider{
+  height:1px;
+  background:#e5e7eb;
+  margin:18px 0;
+  opacity:.7;
+}
+
+/* Quick-role buttons */
+.login__quick{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:8px;
+}
+.login__quickBtn{
+  border:1px solid #e5e7eb;
+  background:#fafafa;
+  padding:10px 12px;
+  border-radius:12px;
+  cursor:pointer;
+  font-weight:600;
+  transition:box-shadow .15s ease, background .15s ease, border-color .15s ease, transform .02s ease;
+}
+.login__quickBtn:hover{ background:#f4f4f5; }
+.login__quickBtn:focus-visible{
+  outline:none;
+  box-shadow:0 0 0 4px var(--ring);
+}
+
+/* Selected state indicator */
+.login__quickBtn.is-selected{
+  background:#eef2ff;
+  border-color:var(--brand);
+  box-shadow:0 0 0 4px var(--ring);
+  transform:translateY(-1px);
+  position:relative;
+}
+.login__quickBtn.is-selected::after{
+  position:absolute;
+  right:10px;
+  top:8px;
+  font-size:14px;
+  font-weight:800;
+  color:var(--brand);
+}
+
+/* Footer hint */
+.signup-hint{
+  text-align:center;
+  color:#334155;
+  margin-top:12px;
+}
+.signup-hint a{
+  color:var(--brand);
+  font-weight:700;
+  text-decoration:none;
+}
+
+
+.login__field select{
+  flex:1;
+  width:100%;
+  border:0;
+  outline:0;
+  background:transparent;
+  color:var(--text);
+  font-size:15px;
+  line-height:1.2;
+  padding:8px 36px 8px 0;
+  cursor:pointer;
+  appearance:none;
+  -webkit-appearance:none;
+  -moz-appearance:none;
+}
+/* Custom caret for select */
+.login__field select{
+  background-image:
+    linear-gradient(45deg, transparent 50%, #6b7280 50%),
+    linear-gradient(135deg, #6b7280 50%, transparent 50%);
+  background-position:
+    calc(100% - 18px) calc(50% - 2px),
+    calc(100% - 13px) calc(50% - 2px);
+  background-size:5px 5px, 5px 5px;
+  background-repeat:no-repeat;
+}
+/* Hide legacy arrow */
+.login__field select::-ms-expand{ display:none; }
+
+/* Dark-mode caret */
+@media (prefers-color-scheme: dark){
+  .login__field select{
+    color:#e5e7eb;
+    background-image:
+      linear-gradient(45deg, transparent 50%, #cbd5e1 50%),
+      linear-gradient(135deg, #cbd5e1 50%, transparent 50%);
+  }
+}
